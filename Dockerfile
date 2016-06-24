@@ -5,4 +5,4 @@ RUN gem install -V fluentd-ui
 RUN fluent-gem install fluent-plugin-influxdb
 
 EXPOSE 9292 24224 24230
-CMD ["fluentd-ui start"]
+CMD ["fluentd-ui", "start"]
