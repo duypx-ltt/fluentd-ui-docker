@@ -1,4 +1,4 @@
-FROM ruby:2.3
+FROM ruby:2.1
 
 RUN gem install fluentd --no-ri --no-rdoc
 RUN gem install -V fluentd-ui
