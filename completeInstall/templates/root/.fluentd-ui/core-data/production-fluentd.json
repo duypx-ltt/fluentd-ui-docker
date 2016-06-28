@@ -1,0 +1,1 @@
+{"id":null,"variant":"td-agent","log_file":"/var/log/td-agent/td-agent.log","pid_file":"/var/run/td-agent/td-agent.pid","config_file":"/etc/td-agent/td-agent.conf"}
