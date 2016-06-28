@@ -22,7 +22,10 @@ RUN /bin/bash -l -c "rvm install 2.3 2.3-dev"
 
 RUN /bin/bash -l -c "gem install fluentd --no-ri --no-rdoc"
 RUN /bin/bash -l -c "fluent-gem install fluent-plugin-influxdb"
-RUN /bin/bash -l -c "git clone https://github.com/fluent/fluentd-ui && cd fluentd-ui && bundle install"
+RUN /bin/bash -l -c "mkdir -p /opt/build; cd /opt/build && git clone https://github.com/fluent/fluentd-ui && cd fluentd-ui && bundle install"
+
+COPY templates /opt/build_context/templates
+ENTRYPOINT ["\/bin\/bash", "\/opt\/build_context\/templates\/auto_entryPoint.sh"]
+CMD ["fluentd-ui", "start"]
 
 EXPOSE 9292 24224 24230
-CMD ["fluentd-ui", "start"]
