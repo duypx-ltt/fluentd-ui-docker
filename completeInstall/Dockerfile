@@ -29,7 +29,7 @@ RUN /bin/bash -l -c "mkdir -p /opt/build; cd /opt/build && git clone https://git
 
 COPY templates /
 
-ENTRYPOINT ["\/bin\/bash", "\/opt\/build_context\/auto_entryPoint.sh"]
+ENTRYPOINT ["\/bin\/bash", "\/auto_entryPoint.sh"]
 CMD ["fluentd-ui", "start"]
 
 EXPOSE 9292 24224 24230
