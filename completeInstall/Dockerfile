@@ -18,8 +18,6 @@ RUN apt-get update && \
 
 #Install td-agent from deb
 RUN curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
-#Install td-agent influxdb plugin
-RUN /usr/sbin/td-agent-gem install fluent-plugin-influxdb
 
 #Install fluend-ui from source
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
