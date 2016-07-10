@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+MAINTAINER Sahil Ahuja <sahilahuja@gmail.com>
 
 RUN apt-get update && \
     apt-get install -y git \
