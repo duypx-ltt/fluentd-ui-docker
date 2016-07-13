@@ -10,6 +10,7 @@ RUN apt-get update && \
       byobu \
       net-tools \
       lsof \
+      wget \
       curl \
       make \
       build-essential \
