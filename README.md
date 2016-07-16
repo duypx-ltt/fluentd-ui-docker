@@ -1,4 +1,4 @@
 # fluentd-ui-docker
 Docker containing fluentd and fluentd-ui
 
-The default fleuntd username is 'admin' and password is 'changeme'
+Find running instructions at: https://hub.docker.com/r/sahil87/fluentd-ui-docker/
