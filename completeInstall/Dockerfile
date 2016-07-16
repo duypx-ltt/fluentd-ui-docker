@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 MAINTAINER Sahil Ahuja <sahilahuja@gmail.com>
 
 RUN apt-get update && \
@@ -19,12 +19,14 @@ RUN apt-get update && \
       libxslt1-dev
 
 #Install td-agent from deb
-RUN curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-trusty-td-agent2.sh | sh
+RUN curl -L https://toolbelt.treasuredata.com/sh/install-ubuntu-xenial-td-agent2.sh | sh
 
-#Install fluend-ui from source
+#Install RVM
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
 RUN /bin/bash -l -c "curl -L get.rvm.io | bash -s stable --rails"
 RUN /bin/bash -l -c "rvm install 2.3 2.3-dev"
+
+#Build and install fluentd-ui from source
 RUN /bin/bash -l -c "mkdir -p /opt/build; cd /opt/build && git clone https://github.com/fluent/fluentd-ui && cd fluentd-ui && bundle install"
 
 COPY templates /
