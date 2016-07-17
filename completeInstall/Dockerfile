@@ -34,4 +34,4 @@ COPY templates /
 ENTRYPOINT ["\/bin\/bash", "\/auto_entryPoint.sh"]
 CMD ["fluentd-ui", "start"]
 
-EXPOSE 9292 24224 24230
+EXPOSE 9292 9880 24220 24224 24230
